@@ -1,16 +1,26 @@
 package org.test.model;
 
 public class UserVO {
-
+	
+	private Integer user_num;
 	private String id;
 	private String password;
 	private String name;
 	private String email;
+		
 	
+	public Integer getUser_num() {
+		return user_num;
+	}
+
+	public void setUser_num(Integer user_num) {
+		this.user_num = user_num;
+	}
+
 	public String getId() {
 		return id;
-	}
-	
+	}	
+
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -38,10 +48,6 @@ public class UserVO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	@Override
-	public String toString() {
-		return "UserVO [id=" + id + ", password=" + password + ", name=" + name + ", email=" + email + "]";
-	}	
+	
 	
 }

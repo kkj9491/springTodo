@@ -20,20 +20,19 @@ public class UserDAOImpl implements UserDAO{
 	}
 
 	@Override
-	public UserVO read(String id) throws Exception {		
-		return session.selectOne(namespace + ".read", id);
+	public UserVO read(Integer user_num) throws Exception {		
+		return session.selectOne(namespace + ".read", user_num);
 		
 	}
 
 	@Override
 	public void update(UserVO userVO) throws Exception {
 		session.update(namespace + ".update", userVO);
-		
 	}
 
 	@Override
-	public void delete(String id) throws Exception {
-		session.delete(namespace + ".delete", id);
+	public void delete(Integer user_num) throws Exception {
+		session.delete(namespace + ".delete", user_num);
 		
 	}
 

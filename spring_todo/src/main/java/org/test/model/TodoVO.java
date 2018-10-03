@@ -4,11 +4,19 @@ import java.util.Date;
 
 public class TodoVO {
 
+	private Integer todo_num;
 	private String todo;
 	private String content;
 	private Date enddate;
-	private String endflag;
-	
+		
+	public Integer getTodo_num() {
+		return todo_num;
+	}
+
+	public void setTodo_num(Integer todo_num) {
+		this.todo_num = todo_num;
+	}
+
 	public String getTodo() {
 		return todo;
 	}
@@ -32,18 +40,6 @@ public class TodoVO {
 	public void setEnddate(Date enddate) {
 		this.enddate = enddate;
 	}
-	
-	public String getEndflag() {
-		return endflag;
-	}
-	
-	public void setEndflag(String endflag) {
-		this.endflag = endflag;
-	}
-
-	@Override
-	public String toString() {
-		return "TodoVO [todo=" + todo + ", content=" + content + ", enddate=" + enddate + ", endflag=" + endflag + "]";
-	}	
+		
 	
 }
