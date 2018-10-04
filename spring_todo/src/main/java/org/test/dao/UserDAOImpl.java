@@ -5,11 +5,12 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
 import org.test.model.UserVO;
 
+@Repository
 public class UserDAOImpl implements UserDAO{
-	
-	
+		
 	private static final String namespace = "org.test.mapper.UserMapper";
 	
 	@Inject
