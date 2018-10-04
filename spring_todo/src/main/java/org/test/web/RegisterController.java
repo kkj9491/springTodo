@@ -2,9 +2,10 @@ package org.test.web;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +19,8 @@ public class RegisterController {
 
 	private static final Logger logger = LoggerFactory.getLogger(RegisterController.class);
 	
-	@Autowired
-	UserDAO dao;
+	@Inject
+	private UserDAO dao;
 	
 	//회원등록
 	@RequestMapping(value="/register", method=RequestMethod.GET)
@@ -85,7 +86,7 @@ public class RegisterController {
 		return "updateForm";
 	}
 	
-	@RequestMapping(value="/update", method=RequestMethod.POST)
+/*	@RequestMapping(value="/update", method=RequestMethod.POST)
 	@ResponseBody
 	public String updateProc(UserVO userVO) {
 		logger.info("update post: userVO=" + userVO);
@@ -102,6 +103,6 @@ public class RegisterController {
 		}
 		
 		return "fail2";
-	}
+	}*/
 	
 }

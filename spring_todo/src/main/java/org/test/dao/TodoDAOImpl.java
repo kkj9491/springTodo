@@ -2,16 +2,17 @@ package org.test.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.inject.Inject;
+
+import org.mybatis.spring.SqlSessionTemplate;
 import org.test.model.TodoVO;
 
 public class TodoDAOImpl implements TodoDAO {
 
 	private static final String namespace = "org.test.mapper.TodoMapper";
 	
-	@Autowired
-	SqlSession session;	
+	@Inject
+	SqlSessionTemplate session;	
 	
 	@Override
 	public void create(TodoVO todoVO) throws Exception {
